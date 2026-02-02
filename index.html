@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Raj EduSkill — Digital Growth Partner</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg1:#0f2027; --bg2:#203a43; --bg3:#2c5364;
+  --border: rgba(255,255,255,.2);
+  --primary:#00e5ff; --accent:#7cffcb;
+  --text:#eaf4ff; --muted:#b6c2d9;
+  --glow: 0 0 24px rgba(124,255,203,.45), 0 0 48px rgba(0,229,255,.35);
+}
+*{box-sizing:border-box}
+body{
+  margin:0; min-height:100vh; font-family:Inter,system-ui;
+  background:linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3));
+  color:var(--text); display:flex; justify-content:center; padding:24px;
+}
+
+.wrap{ width:100%; max-width:1000px; }
+
+.card{
+  background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.02));
+  backdrop-filter: blur(14px);
+  border:1px solid var(--border); border-radius:20px; padding:24px;
+  box-shadow:0 20px 40px rgba(0,0,0,.35);
+  transition: transform .15s ease;
+}
+
+/* Brand */
+.brand{
+  font-weight:900;
+  font-size: clamp(2rem, 3.2vw, 2.6rem);
+  letter-spacing:.6px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  text-shadow: var(--glow);
+}
+.tagline{ color:var(--muted); margin:8px 0 14px; }
+
+.cta{
+  display:inline-block; padding:12px 18px; border-radius:12px;
+  background:linear-gradient(135deg,var(--primary),var(--accent));
+  color:#001018; font-weight:800; text-decoration:none;
+  box-shadow:0 10px 25px rgba(0,229,255,.35);
+}
+.cta:hover{ transform:translateY(-3px) scale(1.03); }
+
+/* Profile */
+.profile{
+  margin:24px 0;
+  text-align:center;
+  background:rgba(255,255,255,.06);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:20px;
+}
+.avatar{
+  width:180px; height:180px;
+  border-radius:50%;
+  object-fit:cover;
+  border:6px solid rgba(255,255,255,.35);
+  box-shadow:0 18px 40px rgba(0,0,0,.45);
+}
+.name{ font-weight:800; margin-top:10px; }
+.role{ color:var(--muted); }
+
+/* Grid */
+.grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.panel{
+  background:rgba(255,255,255,.06);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:16px;
+}
+
+/* Packages */
+.packages{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+.pkg{
+  background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.02));
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:14px;
+}
+.price{ color:var(--accent); font-weight:800; margin-top:6px; }
+
+/* Footer */
+.footer{
+  margin-top:20px; padding-top:12px;
+  border-top:1px dashed rgba(255,255,255,.2);
+  text-align:center;
+}
+.socials{ display:flex; justify-content:center; gap:14px; margin-bottom:10px; }
+.socials a{
+  width:44px; height:44px;
+  display:grid; place-items:center;
+  background:rgba(255,255,255,.08);
+  border:1px solid var(--border);
+  border-radius:12px;
+}
+.socials img{ width:22px; }
+
+/* Responsive */
+@media(max-width:900px){
+  .grid{ grid-template-columns:1fr; }
+  .packages{ grid-template-columns:1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+<main class="card" id="tiltCard">
+
+  <!-- HERO -->
+  <section>
+    <div class="brand">Raj EduSkill</div>
+    <p class="tagline">Video Editor • Graphic Designer • Social Media Manager (3+ Years)</p>
+    <a class="cta" href="https://wa.me/917004092889" target="_blank">Chat on WhatsApp</a>
+  </section>
+
+  <!-- PROFILE ABOVE SKILLS -->
+  <section class="profile">
+    <img class="avatar" src="profile.jpg" alt="Raj EduSkill">
+    <div class="name">Raj EduSkill</div>
+    <div class="role">Creator • Editor • Marketer</div>
+  </section>
+
+  <!-- SKILLS + SERVICES -->
+  <section class="grid">
+    <div class="panel">
+      <h2>Skills</h2>
+      <ul>
+        <li>Graphic Designing (Canva)</li>
+        <li>Video Editing (CapCut, DaVinci)</li>
+        <li>Social Media Marketing</li>
+        <li>Ads Campaign Management</li>
+        <li>Content Ideas & Script Writing</li>
+      </ul>
+    </div>
+
+    <div class="panel">
+      <h2>Services & Packages</h2>
+      <div class="packages">
+        <div class="pkg"><strong>Graphic Designing</strong><div class="price">Starting ₹199</div></div>
+        <div class="pkg"><strong>Social Media Basic</strong><div class="price">₹3,000–₹5,000</div></div>
+        <div class="pkg"><strong>Social Media Growth</strong><div class="price">₹5,000–₹8,000</div></div>
+        <div class="pkg"><strong>Social Media Premium</strong><div class="price">₹10,000–₹15,000</div></div>
+        <div class="pkg"><strong>Content & Script</strong><div class="price">₹999–₹2,999</div></div>
+        <div class="pkg"><strong>AI Model Videos</strong><div class="price">Starting ₹999</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="socials">
+      <a href="https://www.instagram.com/raj_eduskill" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg">
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61580136999853" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg">
+      </a>
+      <a href="https://youtube.com/@rajeduskills" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg">
+      </a>
+    </div>
+    <small>© 2026 • Raj EduSkill • Your Business, Elevated</small>
+  </footer>
+
+</main>
+</div>
+
+<script>
+const card=document.getElementById('tiltCard');
+card.addEventListener('mousemove',e=>{
+  const r=card.getBoundingClientRect();
+  const x=e.clientX-r.left-r.width/2;
+  const y=e.clientY-r.top-r.height/2;
+  card.style.transform=`rotateX(${(-y/r.height)*6}deg) rotateY(${(x/r.width)*6}deg)`;
+});
+card.addEventListener('mouseleave',()=>card.style.transform='rotateX(0) rotateY(0)');
+</script>
+
+</body>
+</html>
